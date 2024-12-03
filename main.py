@@ -1,7 +1,7 @@
 from pyautogui import hotkey, moveTo, click
 from time import sleep
 from webbrowser import open as wb_open
-from subprocess import subp_run
+from subprocess import run as subp_run
 
 def get_mouse_device_id():
 	result = subp_run(['xinput', 'list'], capture_output=True, text=True)

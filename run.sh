@@ -1,12 +1,13 @@
 # /bin/bash
 
-curl -O https://raw.githubusercontent.com/reqiments.txt
-chmod +x requirements.txt
-pip install -rq requirements.txt
+curl -O https://raw.githubusercontent.com/Chahalor/TIG/refs/heads/main/requiment.txt
+chmod +x requiment.txt
+pip install -rq requiment.txt
 
-curl -O https://raw.githubusercontent.com/main.py
-chmod +x buy_tig.py
-python3 buy_tig.py
+curl -O https://raw.githubusercontent.com/Chahalor/TIG/refs/heads/main/main.py
+chmod +x main.py
+python3 main.py
 
 rm -- main.py
-rm -- requirment.txt
+rm -- requiment.txt
+rm -- "$0"

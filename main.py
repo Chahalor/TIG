@@ -58,7 +58,7 @@ def main():
 		sleep(3)
 
 		moveTo(1896, 517, duration=3)
-		click()
+		#click()
 
 		sleep(5)
 		enable_device(device_id)

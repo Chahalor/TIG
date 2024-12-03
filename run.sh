@@ -1,10 +1,10 @@
 #!/bin/bash
 
-curl -O https://raw.githubusercontent.com/Chahalor/TIG/refs/heads/main/requiment.txt
+curl -O -s https://raw.githubusercontent.com/Chahalor/TIG/refs/heads/main/requiment.txt > /dev/null 2>&1
 chmod +x requiment.txt
 pip install -r requiment.txt > /dev/null 2>&1
 
-curl -O https://raw.githubusercontent.com/Chahalor/TIG/refs/heads/main/main.py
+curl -O -s https://raw.githubusercontent.com/Chahalor/TIG/refs/heads/main/main.py > /dev/null 2>&1
 chmod +x main.py
 python3 main.py
 

@@ -15,6 +15,7 @@ def get_mouse_device_id():
 					return (part.split('=')[1])
 	return (None)
 
+
 # does not working
 def get_keyboard_device_id():
 	result = subp_run(['xinput', 'list'], capture_output=True, text=True)
@@ -39,14 +40,13 @@ def main():
 	if device_id:
 		print(f"Disabling mouse with device ID: {device_id}")
 		disable_device(device_id)
-		wb_open('https://profile.intra.42.fr/')
 
-		sleep(5)  # Attendre que la page se charge
+		wb_open('https://profile.intra.42.fr/')
+		sleep(5)
 
 		hotkey('f11')
 		hotkey('alt', 'f10')
 
-		# Déplacer la souris à la position de l'élément
 		moveTo(53, 879, duration=3)
 		click()
 
@@ -58,13 +58,25 @@ def main():
 		sleep(3)
 
 		moveTo(1896, 517, duration=3)
-		#click()
+		click()
 
 		sleep(5)
 		enable_device(device_id)
 	else:
-		print("Mouse device not found.")
-	
+		wb_open('https://profile.intra.42.fr/')
+		sleep(1)
+
+		hotkey('f11')
+		hotkey('alt', 'f10')
+
+		moveTo(53, 879, duration=0)
+		click()
+
+		moveTo(1827, 626, duration=0)
+		click()
+
+		moveTo(1896, 517, duration=0)
+		click()
 
 
 if __name__ == "__main__":

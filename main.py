@@ -62,7 +62,7 @@ def main():
 
 		sleep(5)
 		enable_device(device_id)
-	else:
+	else:	# case no device to block, just doing it instantly
 		wb_open('https://profile.intra.42.fr/')
 		sleep(1)
 
